@@ -5368,6 +5368,30 @@ function fetchMovies() {
   });
 }
 fetchMovies();
+var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\nabbcccddd\nhttp://localhost:1234\n";
+
+//생성자방식
+//const regexp = new RegExp('the', 'gi')
+//리터럴방식
+var regexp = /the/gi;
+console.log(str.match(regexp));
+var regtest = /fox/gi;
+console.log(regtest.test(str));
+var regrep = /fox/gi;
+console.log(str.replace(regrep, 'AAA'));
+
+//\(escape): 이스케이프
+//^ : 줄 시작에서 검색 (예) ^ab
+//$ : 줄 끝에서 검색 (예) ab$
+//m : 줄바꿈 기준으로 검색
+console.log(str.match(/\.$/gim));
+console.log(str.match(/./g));
+console.log(str.match(/dog|fox/g));
+console.log(str.match(/https?/g));
+console.log(str.match(/d{2}/));
+console.log(str.match(/[0-9]{1,}/));
+console.log(str.match(/\b/g));
+console.log(str.match(/(?<=@).{1,}/g));
 },{"axios":"node_modules/axios/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5393,7 +5417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57441" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49785" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
